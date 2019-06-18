@@ -7,17 +7,55 @@ console.log(`${nombre} tiene ${edad} anos`)
 
 imprimirEdad()
 
-function imprimirEdad(n,e)
-{
-console.log(`${n} tiene ${e} anos`)
-}
+//function imprimirEdad(n,e)
+//{
+//console.log(`${n} tiene ${e} anos`)
+//}
 
 imprimirEdad(nombre,edad)
 
-function imprimirEnMayusculas()
+var sergio ={
+    nombre:'Sergio',
+    apellido:'Motoa',
+    edad:29
+}
+
+var juan={
+    nombre:'Juan',
+    apellido:'Galvis',
+    edad:26
+}
+
+function imprimirEnMayusculas(persona)
 {
-    nombre=nombre.toUpperCase()
+    
+    var nombre=persona.nombre.toUpperCase()
     console.log(nombre)
 
 }
-imprimirEnMayusculas()
+
+//desglosando un objeto
+
+function imprimirApellidoMayuscu({apellido})
+{
+    console.log(apellido.toUpperCase())
+}
+
+function imprimirMinus (persona)
+{
+    var {nombre}=persona
+    console.log(nombre.toLowerCase())
+}
+
+function imprNomEdad(persona)
+{
+    var {nombre}=persona
+    var {edad}=persona
+    console.log('Hola, mi nombre es '+nombre+' y tengo '+edad)
+}
+//imprimirEnMayusculas(sergio)
+//imprimirApellidoMayuscu(sergio)
+//imprimirEnMayusculas(juan)
+
+imprNomEdad(sergio)
+imprNomEdad(juan)
