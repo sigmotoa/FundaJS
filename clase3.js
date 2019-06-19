@@ -57,5 +57,20 @@ function imprNomEdad(persona)
 //imprimirApellidoMayuscu(sergio)
 //imprimirEnMayusculas(juan)
 
-imprNomEdad(sergio)
-imprNomEdad(juan)
+//imprNomEdad(sergio)
+//imprNomEdad(juan)
+
+
+//Se realiza la modificacion del objeto
+function cumplir(persona)
+{
+    persona.edad+=1
+}
+//Se genera un nuevo objeto modificado de la base
+function cumplirO(persona)
+{
+    return{
+        ...persona,
+        edad: persona.edad+1
+    }
+}
